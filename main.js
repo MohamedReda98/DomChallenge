@@ -29,7 +29,41 @@ header.appendChild(logo);
 header.appendChild(menu);
 header.style.cssText='display:flex;padding:5px;justify-content:space-between;'
 document.body.appendChild(header);
-
-
+// Adding the content to the shape
+for (let i = 1; i<=15 ;i++){
+// make the main elements
+    let myMainDiv =document.createElement("div");
+    let mySpan =document.createElement("span");
+// make the main text nodes
+    let textDiv = document.createTextNode(`Product`);
+    let textSpan = document.createTextNode(`${i}`);
+    // set the class attribute and assign its value
+    myMainDiv.setAttribute("class","product");
+    myMainDiv.style.cssText="padding: 20px;background-color:#eee; color:gray;\n" +
+        "\twidth: 150px;\n" +
+        "\tdisplay: flex;\n" +
+        "\tflex-direction: column;\n" +
+        "\talign-items: center;\n" +
+        "\ttext-align: center;\n" +
+        "\tborder-radius: .5rem;\n" +
+        "\tborder-bottom: 2px solid blue;\n" +
+        "\tbox-shadow: 0 10px 40px -14px rgba(0,0,0,0.25);";
+    mySpan.style="font-size: 1rem;\n" +
+        "\tfont-weight: 600;\n" +
+        "\tmargin: 0.7rem 0 0.4rem;color:black";
+// adding them to the view menu
+    mySpan.appendChild(textSpan);
+// adding them to the main div
+    myMainDiv.appendChild(mySpan);
+    myMainDiv.appendChild(textDiv);
+    content.appendChild(myMainDiv);
+    // document.body.appendChild(breaking);
+    content.style="display: grid;\n" +
+        "\tgrid-template-columns: repeat(auto-fit,minmax(200px, auto));\n" +
+        "\tjustify-content: center;\n" +
+        "\tgap: 1rem;\n" +
+        "\tmargin-top: 2rem;";
+}
+document.body.appendChild(content);
 
 
