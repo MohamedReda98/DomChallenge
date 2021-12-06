@@ -48,7 +48,7 @@ for (let i = 1; i<=15 ;i++){
         "\tborder-radius: .5rem;\n" +
         "\tborder-bottom: 2px solid blue;\n" +
         "\tbox-shadow: 0 10px 40px -14px rgba(0,0,0,0.25);";
-    mySpan.style="font-size: 1rem;\n" +
+    mySpan.style.cssText="font-size: 1rem;\n" +
         "\tfont-weight: 600;\n" +
         "\tmargin: 0.7rem 0 0.4rem;color:black";
 // adding them to the view menu
@@ -58,12 +58,20 @@ for (let i = 1; i<=15 ;i++){
     myMainDiv.appendChild(textDiv);
     content.appendChild(myMainDiv);
     // document.body.appendChild(breaking);
-    content.style="display: grid;\n" +
+    content.style.cssText="display: grid;\n" +
         "\tgrid-template-columns: repeat(auto-fit,minmax(200px, auto));\n" +
         "\tjustify-content: center;\n" +
-        "\tgap: 1rem;\n" +
+        "\tgap: 2rem;\n" +
         "\tmargin-top: 2rem;";
 }
 document.body.appendChild(content);
 
+// adding the footer
+let myFooterDiv =document.createElement("div");
+let myFooterText = `&copy; Copyright 2021`;
+myFooterDiv.innerHTML = myFooterText;
+myFooterDiv.style.cssText = `width:100%; height:50px; text-align:center; color:white; background-color:green;display:flex;align-items:center;justify-content:center;margin-top: 50px;`;
+footer.appendChild(myFooterDiv);
+document.body.appendChild(footer);
+document.body.style.cssText = `min-height: 100vh; margin:0px;`;
 
