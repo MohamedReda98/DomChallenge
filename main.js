@@ -18,7 +18,7 @@ logo.classList.add('logo');
 menu.classList.add('menu');
 // adding the text content to the elements
 let logoText = 'elzero';
-let menuText = `<ul style="list-style: none;display: flex;gap: 5px;"><li>Home</li><li>About</li><li>Service</li><li>Contact</li></ul>`;
+let menuText = `<ul style="list-style: none;display: flex;gap: 10px;"><li>Home</li><li>About</li><li>Service</li><li>Contact</li></ul>`;
 logo.textContent = logoText;
 menu.innerHTML = menuText;
 // adding the style sheets
@@ -62,7 +62,7 @@ for (let i = 1; i<=15 ;i++){
         "\tgrid-template-columns: repeat(auto-fit,minmax(200px, auto));\n" +
         "\tjustify-content: center;\n" +
         "\tgap: 2rem;\n" +
-        "\tmargin-top: 2rem;";
+        "\tmargin: 2rem;";
 }
 document.body.appendChild(content);
 
@@ -74,4 +74,3 @@ myFooterDiv.style.cssText = `width:100%; height:50px; text-align:center; color:w
 footer.appendChild(myFooterDiv);
 document.body.appendChild(footer);
 document.body.style.cssText = `min-height: 100vh; margin:0px;`;
-
